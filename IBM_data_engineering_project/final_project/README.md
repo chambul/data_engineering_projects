@@ -9,11 +9,25 @@ A multi-national firm has hired you as a data engineer. Your job is to access an
 
 ## Preliminaries: Installing libraries and downloading data
 
-
 ```
 python3.11 -m pip install numpy
 python3.11 -m pip install pandas
 
 wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-PY0221EN-Coursera/labs/v2/exchange_rate.csv
 
+```
+Downloaded exchange rate data is saved as [./inputs/exchange_rate.csv](./inputs/exchange_rate.csv)
+
+## ETL Pipeline 
+The script [banks_etl.py](./banks_etl.py) contains the functions to extract, transform and load data. 
+- Extract: tabular information is extracted from [this url]()`https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks`.
+- Transform: Market Capitalization in GBP, EUR, and INR is included based on the exchange rate information.
+- Load: the transformed dataframe is loaded into an SQL database server as a table
+
+## Logging and Analytics 
+The script [banks_etl.py](./banks_etl.py) contains a function that  maintains appropriate log entries in [banks_etl.log](./banks_etl.log) logfile. The following queries are run on the database table:
+```
+query1 = f"SELECT * FROM {table_name}"
+query2 = f"SELECT AVG(MC_GBP_Billion) FROM {table_name}"
+query3 = f"SELECT Name from {table_name} LIMIT 5"
 ```
