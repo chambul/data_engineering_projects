@@ -1,0 +1,3 @@
+ignore/*
+__pycache__/
+include/gcp/service_account.json

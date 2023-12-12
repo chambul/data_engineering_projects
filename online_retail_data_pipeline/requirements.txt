@@ -1,0 +1,5 @@
+# Astro Runtime includes the following pre-installed providers packages: https://docs.astronomer.io/astro/runtime-image-architecture#provider-packages
+# apache-airflow-providers-google==10.3.0 # this is pre-installed with cosmos
+# soda-core-bigquery==3.0.45 # this is installed in the python virtual env where soda related installations exist
+astronomer-cosmos[dbt-bigquery]==1.0.3 # install google + cosmos + dbt
+protobuf
