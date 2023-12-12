@@ -36,7 +36,14 @@ This project creates a data pipeline to extract [this online retail dataset](htt
 ![](./images/dag_graph.png)
 
 All DAG tasks shown in the above DAG graph is specified in `include/dags/retail.py`: 
-1. 
+1. `upload_csv_to_gcs`: 
+2. `create_retail_dataset`:
+3. `gcs_to_raw`: 
+4. ` check_load()`: 
+5. `transform`: 
+6. `check_transform()`:
+7. `report`:
+8. `check_report()`: 
 
 ## Data Model
 ![](./images/data_model.png)
