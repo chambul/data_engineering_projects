@@ -39,10 +39,10 @@ This project creates a data pipeline to extract [this online retail dataset](htt
 
 All DAG tasks shown in the above DAG graph is specified in `include/dags/retail.py`: 
 1. `upload_csv_to_gcs`: extract the dataset [https://www.kaggle.com/datasets/tunguz/online-retail](https://www.kaggle.com/datasets/tunguz/online-retail) and load into a GCP storage bucket.
-2. `create_retail_dataset`:
-3. `gcs_to_raw`: 
-4. ` check_load()`: 
-5. `transform`: 
+2. `create_retail_dataset`: create an empty dataset in BigQuery. 
+3. `gcs_to_raw`: create a table named `raw_invoices` and load the dataset from the storage bucket. 
+4. ` check_load()`: run data quality checks for the loaded data. Tests are in `include/soda/checks/sources/raw_invoices.yml`.  
+5. `transform`: transform the data into fact and dimension tables based on the [data model](./images/data_model.png) shown below. 
 6. `check_transform()`:
 7. `report`:
 8. `check_report()`: 
