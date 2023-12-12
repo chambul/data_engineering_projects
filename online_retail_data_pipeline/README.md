@@ -32,8 +32,11 @@ This project creates a data pipeline to extract [this online retail dataset](htt
     pip install --no-cache-dir dbt-bigquery==1.5.3 && deactivate
   ```
 
-## Airflow Dag Graph 
+## Pipeline
 ![](./images/dag_graph.png)
+
+All DAG tasks shown in the above DAG graph is specified in `include/dags/retail.py`: 
+1. 
 
 ## Data Model
 ![](./images/data_model.png)
