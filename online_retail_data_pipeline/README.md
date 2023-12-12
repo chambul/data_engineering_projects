@@ -42,10 +42,13 @@ All DAG tasks shown in the above DAG graph is specified in `include/dags/retail.
 2. `create_retail_dataset`: create an empty dataset in BigQuery. 
 3. `gcs_to_raw`: create a table named `raw_invoices` and load the dataset from the storage bucket. 
 4. ` check_load()`: run data quality checks for the loaded data. Tests are in `include/soda/checks/sources/raw_invoices.yml`.  
-5. `transform`: transform the data into fact and dimension tables based on the [data model](./images/data_model.png) shown below. 
-6. `check_transform()`:
-7. `report`:
-8. `check_report()`: 
+5. `transform`: transform the data into fact and dimension tables based on the [data model](./images/data_model.png) shown below. dbt models are in `include/dbt/models/transform`
+6. `check_transform()`: run data quality checks for transformed tables. Tests are in `include/soda/checks/transform/`. 
+7. `report`: generate tables for analytics. dbt models are in `include/dbt/models/report`. 
+8. `check_report()`: run data quality checks for analytics tables. Tests are in `include/soda/checks/report/`.
 
 ## Data Model
 ![](./images/data_model.png)
+
+## Dashboard 
+![](./images/retail-dashboard-Metabase.png)
