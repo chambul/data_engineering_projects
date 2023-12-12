@@ -4,7 +4,7 @@ This project creates a data pipeline to extract, transform and load an online re
 ## Primilinaries 
 * Airflow is used as the orchestration tool together with Astro CLI.
      * A `Google Cloud` connection is created using Airflow → Admin → Connections. This connection is used to access all GCP services throughout this project.
-     * Tasks are run in the command line. For instance, the task is run as `airflow tasks test retail upload_csv_to_gcs 2023-12-07`
+     * Tasks are run in the command line. For instance, the task `upload_csv_to_gcs` is run as `airflow tasks test retail upload_csv_to_gcs 2023-12-07`. 
 * Soda is used to conduct data quality checks.
     * Installation:
   ```
