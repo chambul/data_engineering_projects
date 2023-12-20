@@ -1,6 +1,8 @@
 # TLC Taxi Data Analysis Project 
 This project creates an ETL pipeline for TLC taxi data and then performs analytics and generates a report. The technologies involved in this project are GCP Storage, GCP Compute instance (EC2), Mage, BigQuery and Looker Studio.  
 
+![](./taxi_data_analysis_workflow.png) 
+
 ## Data Model 
 Convert the flat CSV file into fact and dimension Tables.
 ![](taxi_data_model.png)
