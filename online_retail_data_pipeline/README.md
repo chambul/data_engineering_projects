@@ -1,6 +1,8 @@
 # Online Retail Data Pipeline 
 This project creates a data pipeline to extract, transform and load an online retail dataset, perform data quality checking and create a dashboard. The technologies involved in this project are GCP Storage, BigQuery, Airflow, Soda, Astro CLI, Docker, dbt and Metabase.
 
+![](./images/online_retail_data_pipeline.png)
+
 ## Primilinaries 
 * Airflow is used as the orchestration tool together with Astro CLI.
      * A `Google Cloud` connection is created using Airflow → Admin → Connections. This connection is used to access all GCP services throughout this project.
